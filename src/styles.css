@@ -1,0 +1,16 @@
+h1 {
+    color: #0b5ed7;
+    margin-top: 20px;
+  }
+  body {
+    margin-top: 50px;
+  }
+  .row {
+    margin-top: 20px;
+  }
+  .containers {
+    border: 1px solid gray;
+    padding: 30px;
+    max-width: 600px;
+    border-radius: 15px;
+  }
