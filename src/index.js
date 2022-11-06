@@ -12,7 +12,7 @@ function showWeather(response) {
   h1.innerHTML = response.data.name;
   let temp = Math.round(response.data.main.temp);
   let h2 = document.querySelector("h2");
-  h2.innerHTML = `${temp}°c`;
+  h2.innerHTML = `${temp}°C`;
   let info = response.data.weather[0].main;
   let h4 = document.querySelector("h4");
   h4.innerHTML = `${info}`;
