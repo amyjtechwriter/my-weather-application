@@ -1,9 +1,15 @@
 let now = new Date();
 let h3 = document.querySelector("h3");
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let day = days[now.getDay()];
 let curr_hour = now.getHours();
+if (curr_hour < 10) {
+    curr_hour = `0${curr_hour}`;
+}
 let curr_min = now.getMinutes();
+if (curr_min < 10) {
+    curr_min = `0${curr_min}`; 
+}
 
 h3.innerHTML = `${day} ${curr_hour}:${curr_min}`;
 
