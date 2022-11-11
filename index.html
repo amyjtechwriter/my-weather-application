@@ -4,54 +4,51 @@
 <head>
     <title>Weather</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="src/styles.css" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
 </head>
 
 <body>
     <div class="containers">
         <form class="search-form" id="search-form">
-            <input type="search" id="city-input" placeholder="Search City" />
+            
+            <input type="search" id="city-input" placeholder="Search for a city" autocomplete="off" size="40" />
+            
             <input type="submit" value="Search" class="btn btn-outline-success" />
             <button type="button" class="btn btn-outline-primary" id="current-button">Current</button>
         </form>
         <h1 id="city">London</h1>
-        <h2>22°C</h2>
-        <h3>Friday 12:36</h3>
-        <h4><strong>Sunny</strong></h4>
+        <ul>
+            <li>Last updated at <span id="time"></span></li>
+        </ul>
+
         <div class="row">
-            <div class="col">
-                <strong>Sat</strong>
-                <br />☀
-                <br />19°
+            <div class="col-6">
+              <div class="overview">
+                <img src="" alt="clear" id="icon" />
+                <strong id="temperature"></strong>
+                <sup class="units">
+                <span id="celsius" class="active">°C</span>
+                <span class="vertical-line"> |</span>
+                <span id="fahrenheit">°F</span>
+                </sup>
+              </div>
             </div>
-            <div class="col">
-                <strong>Sun</strong>
-                <br />☀
-                <br />18°
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> mph</li>
+                <li>Description: <span id="description"></span></li>
+              </ul>
             </div>
-            <div class="col">
-                <strong>Mon</strong>
-                <br />🌧
-                <br />20°
-            </div>
-            <div class="col">
-                <strong>Tue</strong>
-                <br />☁
-                <br />18°
-            </div>
-            <div class="col">
-                <strong>Wed</strong>
-                <br />🌩
-                <br />19°
-            </div>
+          </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
-    </div>
-    </div>
-    <script src="src/index.js"></script>
+      <script src="src/index.js"></script>
     <footer>
         <a href="https://github.com/amyjtechwriter/my-weather-application" target="_blank"> Open-source code</a> by Amy Jonsson
     </footer>
