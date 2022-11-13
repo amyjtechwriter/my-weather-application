@@ -52,11 +52,17 @@ h1 {
     font-size: 20px;
   }
 
-  .btn-outline-success {
-    
-  }
-
  footer {
     display: block;
     text-align: center;
+}
+
+.overview .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.overview .active:hover {
+  text-decoration: none;
 }
